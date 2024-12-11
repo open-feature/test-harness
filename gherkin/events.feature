@@ -5,7 +5,8 @@ Feature: Flagd Provider State Changes
     Given a flagd provider is set
 
   Scenario Outline: Provider events
-    When a <event> handler is added
+    Given a <event> handler is added
+    When the connection is lost for 20s
     Then the <event> handler must run
     Examples:
       | event                          |
@@ -14,11 +15,11 @@ Feature: Flagd Provider State Changes
       | PROVIDER_READY                 |
 
   Scenario: Provider events chain ready -> stale -> error -> ready
-    When a PROVIDER_READY handler is added
+    Given a PROVIDER_READY handler is added
+    And a PROVIDER_STALE handler is added
+    And a PROVIDER_ERROR handler is added
     Then the PROVIDER_READY handler must run
-    When a PROVIDER_STALE handler is added
+    When the connection is lost for 20s
     Then the PROVIDER_STALE handler must run
-    When a PROVIDER_ERROR handler is added
     Then the PROVIDER_ERROR handler must run
-    When a PROVIDER_READY handler is added
     Then the PROVIDER_READY handler must run
