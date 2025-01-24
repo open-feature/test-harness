@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.4](https://github.com/open-feature/flagd-testbed/compare/v1.3.3...v1.3.4) (2025-01-24)
+
+
+### 🧹 Chore
+
+* **deps:** update docker/build-push-action digest to ca877d9 ([#209](https://github.com/open-feature/flagd-testbed/issues/209)) ([75e8b97](https://github.com/open-feature/flagd-testbed/commit/75e8b97d1ec5c726933c61f45b8076283b155df6))
+* **deps:** update ghcr.io/open-feature/flagd docker tag to v0.11.8 ([#207](https://github.com/open-feature/flagd-testbed/issues/207)) ([9f3e13e](https://github.com/open-feature/flagd-testbed/commit/9f3e13e16fa6dd6d50bf6a79d86cf3e8bbc3cd18))
+
 ## [1.3.3](https://github.com/open-feature/flagd-testbed/compare/v1.3.2...v1.3.3) (2025-01-21)
 
 
